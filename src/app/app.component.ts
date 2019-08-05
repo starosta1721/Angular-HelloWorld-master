@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import sampleJSON from './sampleJSON.json';
+import {CreateArrayForDisplay} from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -55,7 +56,7 @@ export class AppComponent {
     
     for (let i = 0; i < this.uniqueQuestion.length; i++) {
       //if (!(/http:/i.test(this.uniqueQuestion[i])) && !(/https:/i.test(this.uniqueQuestion[i])))
-      if (!(this.uniqueQuestion[i].includes("http")) && (this.uniqueQuestion[i].lastIndexOf('?') == this.uniqueQuestion[i].length - 1)) 
+      if (!(this.uniqueQuestion[i].includes("http"))) 
       {
         this.arrayStrings.push(this.uniqueQuestion[i]);
       } else {
