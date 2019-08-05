@@ -54,7 +54,9 @@ export class AppComponent {
     //console.log(this.uniqueQuestion);
     
     for (let i = 0; i < this.uniqueQuestion.length; i++) {
-      if (!(this.uniqueQuestion[i].includes("http")) && (this.uniqueQuestion[i].lastIndexOf('?') == this.uniqueQuestion[i].length - 1)) {
+      //if (!(/http:/i.test(this.uniqueQuestion[i])) && !(/https:/i.test(this.uniqueQuestion[i])))
+      if (!(this.uniqueQuestion[i].includes("http")) && (this.uniqueQuestion[i].lastIndexOf('?') == this.uniqueQuestion[i].length - 1)) 
+      {
         this.arrayStrings.push(this.uniqueQuestion[i]);
       } else {
         this.arrayUrl.push(this.uniqueQuestion[i]);
