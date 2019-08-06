@@ -26,14 +26,14 @@ export class AppComponent {
   arrayUrl: [] = [];
   createArrayForDisplay: any;
   constructor ( createArrayForDisplay: CreateArrayForDisplay) {    
-    
+    this.createArrayForDisplay = createArrayForDisplay;
   };
   getQuestion(number: number) {
     this.createArrayForDisplay.getQuestion(number);
   }
   
   ngOnInit(){
-    
+    console.dir(this);
     this.arrayStrings = this.createArrayForDisplay.getArrayStrings(); 
     this.arrayUrl = this.createArrayForDisplay.getArrayUrl(); 
   };
